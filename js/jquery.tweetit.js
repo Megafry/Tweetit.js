@@ -102,7 +102,10 @@
 				$("#tweetit-start").remove();
 				$("#tweetit-end").remove();
 				var shift = "+=10";
-			
+
+				//Encode the URL
+				sel = encodeURIComponent(sel);
+				
 				mainUrl = mainUrl.replace('{0}', sel.toString().substring(0, chars - 4));
 
 				$("body").append($btn.attr('href', mainUrl));
